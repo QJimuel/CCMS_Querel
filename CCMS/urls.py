@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     path('', view.ccmsMainPage ,name = 'CCMS Main Page'),
+    path('mission/', view.ccmsMission ,name = 'CCMS Mission'),
+    path('vision/', view.ccmsVision ,name = 'CCMS Vission'),
+    path('objectives/', view.ccmsObjectives ,name = 'CCMS Objectives'),
 ]
